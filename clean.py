@@ -1,5 +1,5 @@
 """Clean: une ligne de l'API -> dict prêt à insérer (les clés = colonnes SQL)."""
-
+import json
 # Les arrondissements de Lyon, Paris et Marseille ne sont pas dans la liste des
 # communes (geo.api renvoie une seule commune : 69123, 75056, 13055).
 # On ramène chaque arrondissement vers sa commune principale.
@@ -94,7 +94,46 @@ def clean_culture(row):
         "insee_code": normalize_insee(row.get("code_insee_commune")),
     }
 
+import json
 
+def get_first(value):
+    if not value:
+        return {}
+
+    try:
+        if isinstance(value, str):
+            value = json.loads(value)
+
+        if isinstance(value, list) and len(value) > 0:
+            return value[0]
+
+    except Exception:
+        return {}
+
+    return {}
+
+
+def clean_gendarmerie(row):
+    adresse = get_first(row.get("adresse"))
+    telephone = get_first(row.get("telephone"))
+    site = get_first(row.get("site_internet"))
+
+    return {
+        "itm_identifiant": row.get("itm_identifiant"),
+        "name": row.get("nom"),
+        "partner": row.get("partenaire"),
+        "category": row.get("categorie"),
+        "address": adresse.get("numero_voie"),
+        "postal_code": adresse.get("code_postal"),
+        "commune_name": adresse.get("nom_commune"),
+        "phone": telephone.get("valeur"),
+        "website": site.get("valeur"),
+        "latitude": _to_float(adresse.get("latitude")),
+        "longitude": _to_float(adresse.get("longitude")),
+        "insee_code": normalize_insee(row.get("code_insee_commune")),
+        "url_service_public": row.get("url_service_public"),
+        "date_modification": row.get("date_modification_datetime"),
+    }
 def clean_btp(etab, nom):
     # etab = un établissement de matching_etablissements ; nom = nom de l'entreprise.
     return {

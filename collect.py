@@ -36,5 +36,9 @@ def fetch_page(url, where, select, order_by, offset):
         },
         timeout=30,
     )
+
+    print("URL finale :", resp.url)
+    print("Status :", resp.status_code)
+
     resp.raise_for_status()
     return resp.json().get("results", [])

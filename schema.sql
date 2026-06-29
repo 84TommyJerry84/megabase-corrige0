@@ -69,6 +69,7 @@ CREATE TABLE IF NOT EXISTS pharmacie (
 -- postal ne permet pas de filtrer proprement les départements 01-09. On stocke
 -- donc le brut, SANS lien vers commune (pas de clé étrangère insee_code ici).
 -- La liaison (géocodage via la BAN) sera une étape séparée, faite plus tard.
+
 CREATE TABLE IF NOT EXISTS gare (
     code_uic       TEXT PRIMARY KEY,
     name           TEXT,
@@ -125,4 +126,21 @@ CREATE TABLE IF NOT EXISTS entreprise_btp (
     latitude         DOUBLE PRECISION,
     longitude        DOUBLE PRECISION,
     insee_code       TEXT REFERENCES commune (insee_code)
+);
+
+CREATE TABLE IF NOT EXISTS gendarmerie (
+    itm_identifiant TEXT PRIMARY KEY,
+    name TEXT,
+    partner TEXT,
+    category TEXT,
+    address TEXT,
+    postal_code TEXT,
+    commune_name TEXT,
+    phone TEXT,
+    website TEXT,
+    latitude DOUBLE PRECISION,
+    longitude DOUBLE PRECISION,
+    insee_code TEXT REFERENCES commune(insee_code),
+    url_service_public TEXT,
+    date_modification TIMESTAMP
 );

@@ -27,6 +27,7 @@ DEPT = (sys.argv[1] if len(sys.argv) > 1 else "69").upper().zfill(2)
 EDUCATION = "https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets"
 FINESS = "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets"
 CULTURE = "https://data.culture.gouv.fr/api/explore/v2.1/catalog/datasets"
+GENDARMERIE = "https://api-lannuaire.service-public.gouv.fr/api/explore/v2.1/catalog/datasets"
 
 
 SOURCES = [
@@ -80,6 +81,16 @@ SOURCES = [
         "order_by": "code_bib",
         "clean": clean.clean_culture,
     },
+    {
+        "table": "gendarmerie",
+        "key": "itm_identifiant",
+        "url": f"{GENDARMERIE}/api-lannuaire-administration/records",
+        "where": f'partenaire = "gendarmerie" AND startswith(code_insee_commune, "{DEPT}")',
+        "select": "itm_identifiant,nom,partenaire,categorie,code_insee_commune,adresse,telephone,site_internet,url_service_public,date_modification_datetime",
+        "order_by": "itm_identifiant",
+        "clean": clean.clean_gendarmerie,
+    }
+
 ]
 
 conn = load.connect()

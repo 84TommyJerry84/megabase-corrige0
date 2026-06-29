@@ -23,7 +23,7 @@ conn = psycopg2.connect(
     host=os.environ.get("PGHOST", "localhost"),
     port=os.environ.get("PGPORT", "5432"),
     user=os.environ.get("PGUSER", "postgres"),
-    password=os.environ.get("PGPASSWORD", "to"),
+    password=os.environ.get("PGPASSWORD", "toto"),
     dbname="postgres",
 )
 conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
