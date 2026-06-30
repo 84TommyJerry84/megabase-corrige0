@@ -144,3 +144,15 @@ CREATE TABLE IF NOT EXISTS gendarmerie (
     url_service_public TEXT,
     date_modification TIMESTAMP
 );
+
+CREATE TABLE ephemeride (
+    id_ephemeride SERIAL PRIMARY KEY,
+    insee_code VARCHAR(5) NOT NULL,
+    ephemeride_date DATE NOT NULL,
+    sunrise TIME NOT NULL,
+    sunset TIME NOT NULL,
+    day_duration VARCHAR(5) NOT NULL,
+
+    FOREIGN KEY (insee_code)
+        REFERENCES commune(insee_code)
+);
