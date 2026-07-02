@@ -145,7 +145,7 @@ CREATE TABLE IF NOT EXISTS gendarmerie (
     date_modification TIMESTAMP
 );
 
-CREATE TABLE ephemeride (
+CREATE TABLE IF NOT EXISTS ephemeride (
     id_ephemeride SERIAL PRIMARY KEY,
     insee_code VARCHAR(5) NOT NULL,
     ephemeride_date DATE NOT NULL,
