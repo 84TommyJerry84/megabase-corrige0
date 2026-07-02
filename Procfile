@@ -1,1 +1,1 @@
-worker: python load.py
+web: python main.py
