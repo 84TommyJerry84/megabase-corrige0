@@ -94,8 +94,6 @@ def clean_culture(row):
         "insee_code": normalize_insee(row.get("code_insee_commune")),
     }
 
-import json
-
 def get_first(value):
     if not value:
         return {}

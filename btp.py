@@ -14,9 +14,7 @@ page déduite du nombre d'entreprises déjà chargées pour ce département.
 """
 
 import sys
-
 import requests
-
 import collect
 import clean
 import load

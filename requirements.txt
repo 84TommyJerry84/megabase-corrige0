@@ -4,5 +4,4 @@ requests
 sys
 json
 time
-os
 pathlib

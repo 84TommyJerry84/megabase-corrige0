@@ -7,13 +7,7 @@ import psycopg2
 
 1#DB_URL = os.environ.get("DATABASE_URL", "dbname=megabase0")
 
-DB_URL = (
-    "dbname=megabase0 "
-    "user=postgres "
-    "password=toto "
-    "host=localhost "
-    "port=5432"
-)
+DB_URL = os.environ.get('DATABASE_URL')
 
 SCHEMA = pathlib.Path(__file__).resolve().parent / "schema.sql"
 
