@@ -1,0 +1,8 @@
+pandas
+psycopg2
+requests
+sys
+json
+time
+os
+pathlib
