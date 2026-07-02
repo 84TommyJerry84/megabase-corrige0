@@ -1,7 +1,4 @@
 pandas
-psycopg2
+psycopg2-binary
 requests
-sys
-json
-time
-pathlib
+python-dotenv
