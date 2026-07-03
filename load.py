@@ -4,10 +4,15 @@ import os
 import pathlib
 
 import psycopg2
+from dotenv import load_dotenv
 
-1#DB_URL = os.environ.get("DATABASE_URL", "dbname=megabase0")
+#DB_URL = os.environ.get("DATABASE_URL", "dbname=megabase0")
+
+load_dotenv()
 
 DB_URL = os.environ.get('DATABASE_URL')
+
+print(repr(DB_URL))
 
 SCHEMA = pathlib.Path(__file__).resolve().parent / "schema.sql"
 
