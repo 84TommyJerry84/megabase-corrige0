@@ -2,6 +2,7 @@ import requests
 import psycopg2
 import time
 
+#parametres de la connection postgres
 conn = psycopg2.connect(
     host="localhost",
     port=5432,
