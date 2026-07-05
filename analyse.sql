@@ -91,10 +91,7 @@ ORDER BY
 SELECT
     d.code_departement,
     d.name AS departement,
-    ROUND(
-        COUNT(l.uai)::numeric / COUNT(DISTINCT c.insee_code),
-        2
-    ) AS moyenne_lycees_par_commune
+    ROUND(COUNT(l.uai)::numeric / COUNT(DISTINCT c.insee_code), 2) AS moyenne_lycees_par_commune
 FROM departement AS d
 JOIN commune AS c
     ON c.code_departement = d.code_departement
@@ -150,3 +147,217 @@ AND NOT EXISTS (
 ORDER BY 
     d.code_departement,
     c.name;
+
+-- 3.2 le profil de service d'une commune : combien de chaque type d'établissement, une colonne par typologie ;
+
+SELECT
+    c.insee_code,
+    c.name AS commune,
+    d.name AS departement,
+    r.name AS region,
+
+    COUNT(*) FILTER (WHERE e.typologie = 'lycee') AS nb_lycees,
+    COUNT(*) FILTER (WHERE e.typologie = 'college') AS nb_colleges,
+    COUNT(*) FILTER (WHERE e.typologie = 'pharmacie') AS nb_pharmacies,
+    COUNT(*) FILTER (WHERE e.typologie = 'ehpad') AS nb_ehpad,
+    COUNT(*) FILTER (WHERE e.typologie = 'bibliotheque') AS nb_bibliotheques,
+    COUNT(*) FILTER (WHERE e.typologie = 'mairie') AS nb_mairies,
+    COUNT(*) FILTER (WHERE e.typologie = 'entreprise_btp') AS nb_entreprises_btp,
+    COUNT(*) FILTER (WHERE e.typologie = 'gendarmerie') AS nb_gendarmeries,
+
+    COUNT(e.typologie) AS total_etablissements
+
+FROM commune AS c
+JOIN departement AS d
+    ON d.code_departement = c.code_departement
+JOIN region AS r
+    ON r.code_region = d.code_region
+
+LEFT JOIN (
+    SELECT insee_code, 'lycee' AS typologie FROM lycee
+    UNION ALL
+    SELECT insee_code, 'college' AS typologie FROM college
+    UNION ALL
+    SELECT insee_code, 'pharmacie' AS typologie FROM pharmacie
+    UNION ALL
+    SELECT insee_code, 'ehpad' AS typologie FROM ehpad
+    UNION ALL
+    SELECT insee_code, 'bibliotheque' AS typologie FROM bibliotheque
+    UNION ALL
+    SELECT insee_code, 'mairie' AS typologie FROM mairie
+    UNION ALL
+    SELECT insee_code, 'entreprise_btp' AS typologie FROM entreprise_btp
+    UNION ALL
+    SELECT insee_code, 'gendarmerie' AS typologie FROM gendarmerie
+) AS e
+    ON e.insee_code = c.insee_code
+
+GROUP BY
+    c.insee_code,
+    c.name,
+    d.name,
+    r.name
+
+ORDER BY
+    total_etablissements DESC;
+
+-- 3.3 les communes qui cumulent beaucoup d'habitants et peu de services.
+SELECT
+    c.insee_code,
+    c.name AS commune,
+    d.name AS departement,
+    r.name AS region,
+    c.population,
+
+    COUNT(e.typologie) AS total_services,
+
+    c.population::float / NULLIF(COUNT(e.typologie), 0) AS habitants_par_service
+
+FROM commune AS c
+JOIN departement AS d
+    ON d.code_departement = c.code_departement
+JOIN region AS r
+    ON r.code_region = d.code_region
+
+LEFT JOIN (
+    SELECT insee_code, 'lycee' AS typologie FROM lycee
+    UNION ALL
+    SELECT insee_code, 'college' AS typologie FROM college
+    UNION ALL
+    SELECT insee_code, 'pharmacie' AS typologie FROM pharmacie
+    UNION ALL
+    SELECT insee_code, 'ehpad' AS typologie FROM ehpad
+    UNION ALL
+    SELECT insee_code, 'bibliotheque' AS typologie FROM bibliotheque
+    UNION ALL
+    SELECT insee_code, 'mairie' AS typologie FROM mairie
+    UNION ALL
+    SELECT insee_code, 'entreprise_btp' AS typologie FROM entreprise_btp
+    UNION ALL
+    SELECT insee_code, 'gendarmerie' AS typologie FROM gendarmerie
+) AS e
+    ON e.insee_code = c.insee_code
+
+WHERE c.population IS NOT NULL
+  AND c.population > 5000
+
+GROUP BY
+    c.insee_code,
+    c.name,
+    d.name,
+    r.name,
+    c.population
+
+ORDER BY
+    habitants_par_service DESC NULLS FIRST,
+    c.population DESC;
+
+-- 4. Des indicateurs
+
+-- 4.1 le nombre d'habitants par pharmacie, par département (population / count) : un repère des zones sous-dotées ;
+
+SELECT
+    d.code_departement,
+    d.name AS departement,
+
+    (
+        SELECT SUM(c.population)
+        FROM commune c
+        WHERE c.code_departement = d.code_departement
+    ) AS population_totale,
+
+    (
+        SELECT COUNT(DISTINCT p.finess)
+        FROM pharmacie p
+        JOIN commune c 
+            ON c.insee_code = p.insee_code
+        WHERE c.code_departement = d.code_departement
+    ) AS nombre_pharmacies,
+
+    ROUND(
+        (
+            SELECT SUM(c.population)
+            FROM commune c
+            WHERE c.code_departement = d.code_departement
+        )::numeric
+        /
+        NULLIF(
+            (
+                SELECT COUNT(DISTINCT p.finess)
+                FROM pharmacie p
+                JOIN commune c 
+                    ON c.insee_code = p.insee_code
+                WHERE c.code_departement = d.code_departement
+            ),
+            0
+        ),
+        2
+    ) AS habitants_par_pharmacie
+
+FROM departement d
+ORDER BY habitants_par_pharmacie DESC NULLS LAST;
+
+
+-- 4.2 le taux d'inscription des bibliothèques (emprunteurs rapporté à la population), là où la donnée existe ;
+
+SELECT
+    c.insee_code,
+    c.name AS commune,
+    d.name AS departement,
+    b.name AS bibliotheque,
+    b.borrowers AS emprunteurs,
+    c.population AS population_commune,
+
+    ROUND(
+        b.borrowers::numeric / NULLIF(c.population, 0) * 100,
+        2
+    ) AS taux_inscription_pourcent
+
+FROM bibliotheque b
+
+JOIN commune c
+    ON c.insee_code = b.insee_code
+
+JOIN departement d
+    ON d.code_departement = c.code_departement
+
+WHERE
+    b.borrowers IS NOT NULL
+    AND c.population IS NOT NULL
+    AND c.population > 0
+
+ORDER BY taux_inscription_pourcent DESC;
+
+
+-- 4.3 les communes qui cumulent beaucoup d'habitants et peu de services.
+SELECT
+    code_departement,
+    departement,
+    SUM(population) AS population_totale,
+    SUM(nb_pharmacies) AS nombre_pharmacies,
+    ROUND(
+        SUM(nb_pharmacies)::numeric / NULLIF(SUM(population), 0) * 10000,
+        2
+    ) AS pharmacies_pour_10000_habitants
+FROM (
+    SELECT
+        d.code_departement,
+        d.name AS departement,
+        c.insee_code,
+        c.population,
+        COUNT(DISTINCT p.finess) AS nb_pharmacies
+    FROM departement d
+    JOIN commune c
+        ON c.code_departement = d.code_departement
+    LEFT JOIN pharmacie p
+        ON p.insee_code = c.insee_code
+    GROUP BY
+        d.code_departement,
+        d.name,
+        c.insee_code,
+        c.population
+) t
+GROUP BY
+    code_departement,
+    departement
+ORDER BY pharmacies_pour_10000_habitants DESC;
