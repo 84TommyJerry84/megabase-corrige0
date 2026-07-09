@@ -1,0 +1,10 @@
+name: entrepot_dbt
+version: "1.0"
+profile: entrepot_dbt
+
+model-paths: ["models"]
+
+models:
+  entrepot_dbt:
+    # Des tables, comme au brief 07 (le default dbt est la vue).
+    +materialized: table

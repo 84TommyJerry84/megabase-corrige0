@@ -156,3 +156,16 @@ CREATE TABLE IF NOT EXISTS ephemeride (
     FOREIGN KEY (insee_code)
         REFERENCES commune(insee_code)
 );
+
+CREATE TABLE IF NOT EXISTS eau (
+    id                      TEXT PRIMARY KEY,
+    code_prelevement        TEXT,
+    libelle_parametre       TEXT,
+    resultat_alphanumerique TEXT,
+    resultat_numerique      DOUBLE PRECISION,
+    libelle_unite           TEXT,
+    date_prelevement        TEXT,
+    conclusion_conformite   TEXT,
+    nom_commune             TEXT,
+    insee_code              VARCHAR(5) REFERENCES commune (insee_code)
+);

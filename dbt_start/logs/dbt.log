@@ -1,0 +1,1117 @@
+[0m16:16:50.952096 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A238E8980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A210A4CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A260F82D0>]}
+
+
+============================== 16:16:50.956142 | 24602bb0-07c3-45dc-886c-e28835d3ca6b ==============================
+[0m16:16:50.956142 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m16:16:50.956764 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:16:51.017719 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m16:16:51.018201 [info ] [MainThread]: python version: 3.14.5
+[0m16:16:51.018597 [info ] [MainThread]: python path: C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Scripts\python.exe
+[0m16:16:51.018988 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:16:51.019644 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+cannot access local variable 'summary_message' where it is not associated with a value
+[0m16:16:51.022051 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\requires.py", line 190, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\requires.py", line 136, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\main.py", line 439, in debug
+    results = task.run()
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\task\debug.py", line 114, in run
+    load_profile_status: SubtaskStatus = self._load_profile()
+                                         ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\task\debug.py", line 201, in _load_profile
+    profile_names, summary_message = self._choose_profile_names()
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\task\debug.py", line 276, in _choose_profile_names
+    return profiles, summary_message
+                     ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'summary_message' where it is not associated with a value
+
+[0m16:16:51.022964 [debug] [MainThread]: Command `dbt debug` failed at 16:16:51.022840 after 0.14 seconds
+[0m16:16:51.023363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A261182B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A26128EF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029A25F67BD0>]}
+[0m16:16:51.023814 [debug] [MainThread]: Flushing usage events
+[0m16:16:51.640545 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:32:16.966265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220C9D26630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220C9D266C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220C9D26780>]}
+
+
+============================== 16:32:16.985328 | fa76b92f-e3d5-40d6-96fa-b2f66cf78193 ==============================
+[0m16:32:16.985328 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m16:32:16.985328 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:32:17.005818 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m16:32:17.006342 [info ] [MainThread]: python version: 3.12.10
+[0m16:32:17.007010 [info ] [MainThread]: python path: C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Scripts\python.exe
+[0m16:32:17.007010 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:32:17.007010 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+cannot access local variable 'summary_message' where it is not associated with a value
+[0m16:32:17.011010 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\requires.py", line 190, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\requires.py", line 136, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\main.py", line 439, in debug
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\task\debug.py", line 114, in run
+    load_profile_status: SubtaskStatus = self._load_profile()
+                                         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\task\debug.py", line 201, in _load_profile
+    profile_names, summary_message = self._choose_profile_names()
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\task\debug.py", line 276, in _choose_profile_names
+    return profiles, summary_message
+                     ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'summary_message' where it is not associated with a value
+
+[0m16:32:17.011010 [debug] [MainThread]: Command `dbt debug` failed at 16:32:17.011010 after 0.12 seconds
+[0m16:32:17.011010 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220C9D442C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220C9D6A240>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220C9D26870>]}
+[0m16:32:17.011010 [debug] [MainThread]: Flushing usage events
+[0m16:32:17.619162 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:34:06.952163 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C56725F800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5660E8860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C56725F890>]}
+
+
+============================== 16:34:06.952163 | d4ea7dc6-e0ab-48ee-b870-da5e2ee35850 ==============================
+[0m16:34:06.952163 [info ] [MainThread]: Running with dbt=1.11.12
+[0m16:34:06.952163 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:34:06.981251 [info ] [MainThread]: dbt version: 1.11.12
+[0m16:34:06.981251 [info ] [MainThread]: python version: 3.12.10
+[0m16:34:06.981251 [info ] [MainThread]: python path: C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Scripts\python.exe
+[0m16:34:06.981251 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:34:06.981251 [error] [MainThread]: Encountered an error:
+cannot access local variable 'summary_message' where it is not associated with a value
+[0m16:34:06.985401 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\main.py", line 425, in debug
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\task\debug.py", line 114, in run
+    load_profile_status: SubtaskStatus = self._load_profile()
+                                         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\task\debug.py", line 201, in _load_profile
+    profile_names, summary_message = self._choose_profile_names()
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\task\debug.py", line 276, in _choose_profile_names
+    return profiles, summary_message
+                     ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'summary_message' where it is not associated with a value
+
+[0m16:34:06.986747 [debug] [MainThread]: Command `dbt debug` failed at 16:34:06.986747 after 0.09 seconds
+[0m16:34:06.986747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5660E8860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5672DE2D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C56725FB90>]}
+[0m16:34:06.986747 [debug] [MainThread]: Flushing usage events
+[0m16:34:07.627378 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:37:36.122721 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002390C4BF7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002390C4BF680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002390C4BF770>]}
+
+
+============================== 16:37:36.122721 | 267e0cb3-9879-4243-895d-b84b249a2b33 ==============================
+[0m16:37:36.122721 [info ] [MainThread]: Running with dbt=1.11.12
+[0m16:37:36.122721 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:37:36.144601 [info ] [MainThread]: dbt version: 1.11.12
+[0m16:37:36.147940 [info ] [MainThread]: python version: 3.12.10
+[0m16:37:36.147940 [info ] [MainThread]: python path: C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Scripts\python.exe
+[0m16:37:36.148796 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:37:36.148796 [error] [MainThread]: Encountered an error:
+cannot access local variable 'summary_message' where it is not associated with a value
+[0m16:37:36.148796 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\main.py", line 425, in debug
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\task\debug.py", line 114, in run
+    load_profile_status: SubtaskStatus = self._load_profile()
+                                         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\task\debug.py", line 201, in _load_profile
+    profile_names, summary_message = self._choose_profile_names()
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\task\debug.py", line 276, in _choose_profile_names
+    return profiles, summary_message
+                     ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'summary_message' where it is not associated with a value
+
+[0m16:37:36.148796 [debug] [MainThread]: Command `dbt debug` failed at 16:37:36.148796 after 0.09 seconds
+[0m16:37:36.148796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002390C53F200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002390C4D63C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002390AFB4350>]}
+[0m16:37:36.148796 [debug] [MainThread]: Flushing usage events
+[0m16:37:36.754143 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:47:57.058395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025C8A8B67E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025C8801E930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025C8A666AB0>]}
+
+
+============================== 16:47:57.058395 | 09519365-0bf9-4d80-ae77-1d603a04c522 ==============================
+[0m16:47:57.058395 [info ] [MainThread]: Running with dbt=1.11.12
+[0m16:47:57.067714 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:47:57.085388 [info ] [MainThread]: dbt version: 1.11.12
+[0m16:47:57.086401 [info ] [MainThread]: python version: 3.12.10
+[0m16:47:57.087458 [info ] [MainThread]: python path: C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Scripts\python.exe
+[0m16:47:57.087458 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:47:57.093911 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'USER'
+[0m16:47:57.094988 [debug] [MainThread]: Command `dbt debug` failed at 16:47:57.094988 after 0.15 seconds
+[0m16:47:57.096034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025C8AD8BF80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025C8736E840>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025C8C448AD0>]}
+[0m16:47:57.096034 [debug] [MainThread]: Flushing usage events
+[0m16:47:57.671635 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:49:51.808032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165CB137020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165C8476000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165CB5F6960>]}
+
+
+============================== 16:49:51.808032 | 6a54b260-f711-4949-98c3-50f1ca2b231e ==============================
+[0m16:49:51.808032 [info ] [MainThread]: Running with dbt=1.11.12
+[0m16:49:51.808032 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:49:51.831038 [info ] [MainThread]: dbt version: 1.11.12
+[0m16:49:51.831038 [info ] [MainThread]: python version: 3.12.10
+[0m16:49:51.831038 [info ] [MainThread]: python path: C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Scripts\python.exe
+[0m16:49:51.831038 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:49:51.840190 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'USER'
+[0m16:49:51.841416 [debug] [MainThread]: Command `dbt debug` failed at 16:49:51.841416 after 0.15 seconds
+[0m16:49:51.841416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165CC0FE270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165CD25F1A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165CD318AD0>]}
+[0m16:49:51.842298 [debug] [MainThread]: Flushing usage events
+[0m16:49:52.495450 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:50:44.149200 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175C0F05FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175BE01D7F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175C1535C40>]}
+
+
+============================== 16:50:44.149200 | 966ac02f-f707-408f-af9b-dfb9b745b217 ==============================
+[0m16:50:44.149200 [info ] [MainThread]: Running with dbt=1.11.12
+[0m16:50:44.165206 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:50:44.184364 [info ] [MainThread]: dbt version: 1.11.12
+[0m16:50:44.184364 [info ] [MainThread]: python version: 3.12.10
+[0m16:50:44.184364 [info ] [MainThread]: python path: C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Scripts\python.exe
+[0m16:50:44.185334 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:50:44.233783 [info ] [MainThread]: Using profiles dir at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start
+[0m16:50:44.233783 [info ] [MainThread]: Using profiles.yml file at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\profiles.yml
+[0m16:50:44.233783 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\dbt_project.yml
+[0m16:50:44.233783 [info ] [MainThread]: adapter type: postgres
+[0m16:50:44.233783 [info ] [MainThread]: adapter version: 1.10.2
+[0m16:50:44.233783 [info ] [MainThread]: Configuration:
+[0m16:50:44.233783 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:50:44.233783 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:50:44.233783 [info ] [MainThread]: Required dependencies:
+[0m16:50:44.233783 [debug] [MainThread]: Executing "git --help"
+[0m16:50:44.267023 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:50:44.267023 [debug] [MainThread]: STDERR: "b''"
+[0m16:50:44.267023 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:50:44.267023 [info ] [MainThread]: Connection:
+[0m16:50:44.267023 [info ] [MainThread]:   host: localhost
+[0m16:50:44.267023 [info ] [MainThread]:   port: 5432
+[0m16:50:44.267023 [info ] [MainThread]:   user: postgres
+[0m16:50:44.267023 [info ] [MainThread]:   database: megabase0
+[0m16:50:44.267023 [info ] [MainThread]:   schema: dbt
+[0m16:50:44.267023 [info ] [MainThread]:   connect_timeout: 10
+[0m16:50:44.267023 [info ] [MainThread]:   role: None
+[0m16:50:44.267023 [info ] [MainThread]:   search_path: None
+[0m16:50:44.267023 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:50:44.267023 [info ] [MainThread]:   sslmode: None
+[0m16:50:44.267023 [info ] [MainThread]:   sslcert: None
+[0m16:50:44.267023 [info ] [MainThread]:   sslkey: None
+[0m16:50:44.267023 [info ] [MainThread]:   sslrootcert: None
+[0m16:50:44.267023 [info ] [MainThread]:   application_name: dbt
+[0m16:50:44.267023 [info ] [MainThread]:   retries: 1
+[0m16:50:44.267023 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m16:50:44.560958 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:50:46.838081 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:50:46.838081 [debug] [MainThread]: On debug: select 1 as id
+[0m16:50:46.838081 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:50:46.873265 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+[0m16:50:46.904153 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m16:50:46.905164 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m16:50:46.905164 [debug] [MainThread]: On debug: No close available on handle
+[0m16:50:46.905164 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:50:46.906153 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m16:50:46.907108 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\dbt_project.yml> not found
+
+[0m16:50:46.907108 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:50:46.908113 [debug] [MainThread]: Command `dbt debug` failed at 16:50:46.908113 after 2.86 seconds
+[0m16:50:46.908113 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:50:46.908113 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175C2C67EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175C15CE120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175C15CE180>]}
+[0m16:50:46.909154 [debug] [MainThread]: Flushing usage events
+[0m16:50:47.514223 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:52:17.895689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E94FE6DE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E95480FE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E92A3A090>]}
+
+
+============================== 16:52:17.911373 | 68642cff-47d4-423c-96ba-e1df1f4eb71b ==============================
+[0m16:52:17.911373 [info ] [MainThread]: Running with dbt=1.11.12
+[0m16:52:17.911373 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:52:17.931135 [info ] [MainThread]: dbt version: 1.11.12
+[0m16:52:17.932259 [info ] [MainThread]: python version: 3.12.10
+[0m16:52:17.932259 [info ] [MainThread]: python path: C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Scripts\python.exe
+[0m16:52:17.932259 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:52:17.986905 [info ] [MainThread]: Using profiles dir at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start
+[0m16:52:17.987939 [info ] [MainThread]: Using profiles.yml file at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\profiles.yml
+[0m16:52:17.987939 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\dbt_project.yml
+[0m16:52:17.988902 [info ] [MainThread]: adapter type: postgres
+[0m16:52:17.989949 [info ] [MainThread]: adapter version: 1.10.2
+[0m16:52:17.990902 [info ] [MainThread]: Configuration:
+[0m16:52:17.990902 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:52:17.990902 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:52:17.991901 [info ] [MainThread]: Required dependencies:
+[0m16:52:17.991901 [debug] [MainThread]: Executing "git --help"
+[0m16:52:18.020677 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:52:18.020677 [debug] [MainThread]: STDERR: "b''"
+[0m16:52:18.020677 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:52:18.020677 [info ] [MainThread]: Connection:
+[0m16:52:18.020677 [info ] [MainThread]:   host: localhost
+[0m16:52:18.020677 [info ] [MainThread]:   port: 5432
+[0m16:52:18.020677 [info ] [MainThread]:   user: postgres
+[0m16:52:18.020677 [info ] [MainThread]:   database: megabase0
+[0m16:52:18.020677 [info ] [MainThread]:   schema: dbt
+[0m16:52:18.020677 [info ] [MainThread]:   connect_timeout: 10
+[0m16:52:18.020677 [info ] [MainThread]:   role: None
+[0m16:52:18.020677 [info ] [MainThread]:   search_path: None
+[0m16:52:18.033693 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:52:18.033693 [info ] [MainThread]:   sslmode: None
+[0m16:52:18.034703 [info ] [MainThread]:   sslcert: None
+[0m16:52:18.035006 [info ] [MainThread]:   sslkey: None
+[0m16:52:18.035006 [info ] [MainThread]:   sslrootcert: None
+[0m16:52:18.035006 [info ] [MainThread]:   application_name: dbt
+[0m16:52:18.036250 [info ] [MainThread]:   retries: 1
+[0m16:52:18.036250 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m16:52:18.276771 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:52:18.324223 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:52:18.324223 [debug] [MainThread]: On debug: select 1 as id
+[0m16:52:18.324223 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:52:18.357936 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+[0m16:52:18.388042 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m16:52:18.388042 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m16:52:18.388042 [debug] [MainThread]: On debug: No close available on handle
+[0m16:52:18.388042 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:52:18.399604 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m16:52:18.399604 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\dbt_project.yml> not found
+
+[0m16:52:18.399604 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:52:18.401618 [debug] [MainThread]: Command `dbt debug` failed at 16:52:18.401618 after 0.62 seconds
+[0m16:52:18.401618 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:52:18.401618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E920D6DE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E955F90A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E94FA6360>]}
+[0m16:52:18.401618 [debug] [MainThread]: Flushing usage events
+[0m16:52:19.035686 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:53:53.338901 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F236B2F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F20BCD7F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F23A9ED20>]}
+
+
+============================== 16:53:53.346436 | bd4f2169-0871-4269-8aa7-a0a71de8ddff ==============================
+[0m16:53:53.346436 [info ] [MainThread]: Running with dbt=1.11.12
+[0m16:53:53.346436 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:53:53.366581 [info ] [MainThread]: dbt version: 1.11.12
+[0m16:53:53.367409 [info ] [MainThread]: python version: 3.12.10
+[0m16:53:53.368072 [info ] [MainThread]: python path: C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Scripts\python.exe
+[0m16:53:53.368072 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:53:53.417422 [info ] [MainThread]: Using profiles dir at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start
+[0m16:53:53.417422 [info ] [MainThread]: Using profiles.yml file at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\profiles.yml
+[0m16:53:53.417422 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\dbt_project.yml
+[0m16:53:53.417422 [info ] [MainThread]: adapter type: postgres
+[0m16:53:53.417422 [info ] [MainThread]: adapter version: 1.10.2
+[0m16:53:53.417422 [info ] [MainThread]: Configuration:
+[0m16:53:53.417422 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:53:53.417422 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:53:53.417422 [info ] [MainThread]: Required dependencies:
+[0m16:53:53.417422 [debug] [MainThread]: Executing "git --help"
+[0m16:53:53.452769 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:53:53.452769 [debug] [MainThread]: STDERR: "b''"
+[0m16:53:53.452769 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:53:53.452769 [info ] [MainThread]: Connection:
+[0m16:53:53.452769 [info ] [MainThread]:   host: localhost
+[0m16:53:53.452769 [info ] [MainThread]:   port: 5432
+[0m16:53:53.452769 [info ] [MainThread]:   user: postgres
+[0m16:53:53.452769 [info ] [MainThread]:   database: megabase0
+[0m16:53:53.452769 [info ] [MainThread]:   schema: dbt
+[0m16:53:53.452769 [info ] [MainThread]:   connect_timeout: 10
+[0m16:53:53.452769 [info ] [MainThread]:   role: None
+[0m16:53:53.452769 [info ] [MainThread]:   search_path: None
+[0m16:53:53.452769 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:53:53.452769 [info ] [MainThread]:   sslmode: None
+[0m16:53:53.452769 [info ] [MainThread]:   sslcert: None
+[0m16:53:53.452769 [info ] [MainThread]:   sslkey: None
+[0m16:53:53.452769 [info ] [MainThread]:   sslrootcert: None
+[0m16:53:53.452769 [info ] [MainThread]:   application_name: dbt
+[0m16:53:53.452769 [info ] [MainThread]:   retries: 1
+[0m16:53:53.464084 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m16:53:53.714876 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:53:53.772264 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:53:53.772264 [debug] [MainThread]: On debug: select 1 as id
+[0m16:53:53.772264 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:53:53.794440 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+[0m16:53:53.825899 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m16:53:53.825899 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m16:53:53.825899 [debug] [MainThread]: On debug: No close available on handle
+[0m16:53:53.825899 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:53:53.837809 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m16:53:53.837809 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\dbt_project.yml> not found
+
+[0m16:53:53.837809 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:53:53.837809 [debug] [MainThread]: Command `dbt debug` failed at 16:53:53.837809 after 0.61 seconds
+[0m16:53:53.837809 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:53:53.837809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F2450B4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F23B7AD20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F2596BF50>]}
+[0m16:53:53.837809 [debug] [MainThread]: Flushing usage events
+[0m16:53:54.415843 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:54:25.014325 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CD1832FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CD27FEF60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CD27FCFB0>]}
+
+
+============================== 16:54:25.014325 | 0c29bff9-2153-4513-a257-a7d0b5846449 ==============================
+[0m16:54:25.014325 [info ] [MainThread]: Running with dbt=1.11.12
+[0m16:54:25.014325 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:54:25.036076 [info ] [MainThread]: dbt version: 1.11.12
+[0m16:54:25.036076 [info ] [MainThread]: python version: 3.12.10
+[0m16:54:25.036076 [info ] [MainThread]: python path: C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Scripts\python.exe
+[0m16:54:25.036076 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:54:25.036076 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'USER'
+[0m16:54:25.050231 [debug] [MainThread]: Command `dbt debug` failed at 16:54:25.049752 after 0.15 seconds
+[0m16:54:25.050231 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CD1BF7AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CD39F36B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CD39F1CD0>]}
+[0m16:54:25.050231 [debug] [MainThread]: Flushing usage events
+[0m16:54:25.657347 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:54:58.428385 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE2086DFD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE207D7050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE20BC6900>]}
+
+
+============================== 16:54:58.428385 | 581943a5-d9fc-4de4-b259-82f968b22dbd ==============================
+[0m16:54:58.428385 [info ] [MainThread]: Running with dbt=1.11.12
+[0m16:54:58.428385 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:54:58.454912 [info ] [MainThread]: dbt version: 1.11.12
+[0m16:54:58.454912 [info ] [MainThread]: python version: 3.12.10
+[0m16:54:58.459961 [info ] [MainThread]: python path: C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Scripts\python.exe
+[0m16:54:58.460727 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:54:58.497730 [info ] [MainThread]: Using profiles dir at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start
+[0m16:54:58.513724 [info ] [MainThread]: Using profiles.yml file at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\profiles.yml
+[0m16:54:58.514374 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\dbt_project.yml
+[0m16:54:58.514734 [info ] [MainThread]: adapter type: postgres
+[0m16:54:58.514734 [info ] [MainThread]: adapter version: 1.10.2
+[0m16:54:58.514734 [info ] [MainThread]: Configuration:
+[0m16:54:58.514734 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:54:58.514734 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:54:58.514734 [info ] [MainThread]: Required dependencies:
+[0m16:54:58.514734 [debug] [MainThread]: Executing "git --help"
+[0m16:54:58.548652 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:54:58.548652 [debug] [MainThread]: STDERR: "b''"
+[0m16:54:58.548652 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:54:58.548652 [info ] [MainThread]: Connection:
+[0m16:54:58.548652 [info ] [MainThread]:   host: localhost
+[0m16:54:58.548652 [info ] [MainThread]:   port: 5432
+[0m16:54:58.548652 [info ] [MainThread]:   user: postgres
+[0m16:54:58.548652 [info ] [MainThread]:   database: megabase0
+[0m16:54:58.548652 [info ] [MainThread]:   schema: dbt
+[0m16:54:58.548652 [info ] [MainThread]:   connect_timeout: 10
+[0m16:54:58.548652 [info ] [MainThread]:   role: None
+[0m16:54:58.548652 [info ] [MainThread]:   search_path: None
+[0m16:54:58.548652 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:54:58.548652 [info ] [MainThread]:   sslmode: None
+[0m16:54:58.548652 [info ] [MainThread]:   sslcert: None
+[0m16:54:58.548652 [info ] [MainThread]:   sslkey: None
+[0m16:54:58.548652 [info ] [MainThread]:   sslrootcert: None
+[0m16:54:58.548652 [info ] [MainThread]:   application_name: dbt
+[0m16:54:58.548652 [info ] [MainThread]:   retries: 1
+[0m16:54:58.548652 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m16:54:58.830595 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:54:58.889728 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:54:58.889728 [debug] [MainThread]: On debug: select 1 as id
+[0m16:54:58.890683 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:54:58.935369 [debug] [MainThread]: SQL status: SELECT 1 in 0.045 seconds
+[0m16:54:58.936417 [debug] [MainThread]: On debug: Close
+[0m16:54:58.936417 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:54:58.937369 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:54:58.937369 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\dbt_project.yml> not found
+
+[0m16:54:58.938367 [debug] [MainThread]: Command `dbt debug` failed at 16:54:58.938367 after 0.62 seconds
+[0m16:54:58.939143 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:54:58.939143 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE20EEC080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE2273AC90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE209F38F0>]}
+[0m16:54:58.939143 [debug] [MainThread]: Flushing usage events
+[0m16:54:59.567929 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:55:24.628962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BBFA4A30E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BBFB456120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BBFAD45A30>]}
+
+
+============================== 16:55:24.628962 | 38e9a663-665b-47f3-a572-ba8f18c5240a ==============================
+[0m16:55:24.628962 [info ] [MainThread]: Running with dbt=1.11.12
+[0m16:55:24.628962 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start\\logs'}
+[0m16:55:24.644882 [info ] [MainThread]: dbt version: 1.11.12
+[0m16:55:24.644882 [info ] [MainThread]: python version: 3.12.10
+[0m16:55:24.644882 [info ] [MainThread]: python path: C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Scripts\python.exe
+[0m16:55:24.660185 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:55:24.711420 [info ] [MainThread]: Using profiles dir at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start
+[0m16:55:24.712425 [info ] [MainThread]: Using profiles.yml file at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\profiles.yml
+[0m16:55:24.712425 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\dbt_project.yml
+[0m16:55:24.713375 [info ] [MainThread]: adapter type: postgres
+[0m16:55:24.714412 [info ] [MainThread]: adapter version: 1.10.2
+[0m16:55:24.819001 [info ] [MainThread]: Configuration:
+[0m16:55:24.819001 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:55:24.819001 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:55:24.819001 [info ] [MainThread]: Required dependencies:
+[0m16:55:24.819001 [debug] [MainThread]: Executing "git --help"
+[0m16:55:24.853483 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:55:24.853483 [debug] [MainThread]: STDERR: "b''"
+[0m16:55:24.853483 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:55:24.853483 [info ] [MainThread]: Connection:
+[0m16:55:24.853483 [info ] [MainThread]:   host: localhost
+[0m16:55:24.853483 [info ] [MainThread]:   port: 5432
+[0m16:55:24.853483 [info ] [MainThread]:   user: postgres
+[0m16:55:24.853483 [info ] [MainThread]:   database: megabase0
+[0m16:55:24.853483 [info ] [MainThread]:   schema: dbt
+[0m16:55:24.853483 [info ] [MainThread]:   connect_timeout: 10
+[0m16:55:24.853483 [info ] [MainThread]:   role: None
+[0m16:55:24.853483 [info ] [MainThread]:   search_path: None
+[0m16:55:24.853483 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:55:24.853483 [info ] [MainThread]:   sslmode: None
+[0m16:55:24.853483 [info ] [MainThread]:   sslcert: None
+[0m16:55:24.853483 [info ] [MainThread]:   sslkey: None
+[0m16:55:24.853483 [info ] [MainThread]:   sslrootcert: None
+[0m16:55:24.853483 [info ] [MainThread]:   application_name: dbt
+[0m16:55:24.853483 [info ] [MainThread]:   retries: 1
+[0m16:55:24.853483 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m16:55:25.105551 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:55:25.160446 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:55:25.160446 [debug] [MainThread]: On debug: select 1 as id
+[0m16:55:25.160446 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:55:25.207713 [debug] [MainThread]: SQL status: SELECT 1 in 0.045 seconds
+[0m16:55:25.207713 [debug] [MainThread]: On debug: Close
+[0m16:55:25.207713 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:55:25.207713 [info ] [MainThread]: [32mAll checks passed![0m
+[0m16:55:25.207713 [debug] [MainThread]: Command `dbt debug` succeeded at 16:55:25.207713 after 0.69 seconds
+[0m16:55:25.207713 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:55:25.207713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BBFAC16810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BBF9EBF020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BBFAF3A480>]}
+[0m16:55:25.207713 [debug] [MainThread]: Flushing usage events
+[0m16:55:25.828020 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:56:47.464632 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A04057F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A358D760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A345A270>]}
+
+
+============================== 16:56:47.464632 | 7eed55ac-c2f2-4ecc-b6f3-0744c07dff57 ==============================
+[0m16:56:47.464632 [info ] [MainThread]: Running with dbt=1.11.12
+[0m16:56:47.480334 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start', 'use_colors': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start\\logs'}
+[0m16:56:47.884765 [info ] [MainThread]: State adapter: dbt-state v2.26.0 is enabled
+[0m16:56:48.814157 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7eed55ac-c2f2-4ecc-b6f3-0744c07dff57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A5B4FDA0>]}
+[0m16:56:48.877551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7eed55ac-c2f2-4ecc-b6f3-0744c07dff57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A675A420>]}
+[0m16:56:48.879457 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m16:56:49.201397 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m16:56:49.203402 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m16:56:49.203402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7eed55ac-c2f2-4ecc-b6f3-0744c07dff57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A6765430>]}
+[0m16:56:51.046447 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7eed55ac-c2f2-4ecc-b6f3-0744c07dff57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A6D270B0>]}
+[0m16:56:51.161222 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\target\manifest.json
+[0m16:56:51.161222 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\target\semantic_manifest.json
+[0m16:56:51.161222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7eed55ac-c2f2-4ecc-b6f3-0744c07dff57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A7F03A40>]}
+[0m16:56:51.161222 [info ] [MainThread]: Found 1 model, 4 sources, 475 macros
+[0m16:56:51.161222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7eed55ac-c2f2-4ecc-b6f3-0744c07dff57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A7F03890>]}
+[0m16:56:51.176950 [info ] [MainThread]: 
+[0m16:56:51.176950 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:56:51.176950 [info ] [MainThread]: 
+[0m16:56:51.176950 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:01:51.239595 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:01:51.239595 [info ] [MainThread]: 
+[0m17:01:51.242610 [info ] [MainThread]: Finished running  in 0 hours 5 minutes and 0.06 seconds (300.06s).
+[0m17:01:51.246724 [error] [MainThread]: Encountered an error:
+
+[0m17:01:51.262925 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\requires.py", line 391, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\requires.py", line 408, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\cli\main.py", line 593, in run
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\task\runnable.py", line 626, in run
+    result = self.execute_with_hooks(selected_uids)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\task\runnable.py", line 559, in execute_with_hooks
+    before_run_status = self.before_run(adapter, selected_uids)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt\task\run.py", line 1112, in before_run
+    self.defer_to_manifest()
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt_state\plugin.py", line 98, in defer_to_manifest_override
+    runner_override.defer_to_manifest_override(self)
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt_state\runner.py", line 100, in defer_to_manifest_override
+    run_cache = self._run_cache_get_or_create(task.config, adapter, manifest)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt_state\runner.py", line 355, in _run_cache_get_or_create
+    client = self._get_or_create_client(run_cache_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt_state\runner.py", line 306, in _get_or_create_client
+    self._query_cache_client = QueryCacheGrpcClient.create(
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt_state\grpc\client.py", line 168, in create
+    org_id = sso.org_id(login=True)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt_state\auth\sso.py", line 188, in org_id
+    self._get_or_refresh_token_info(login)
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt_state\auth\sso.py", line 258, in _get_or_refresh_token_info
+    return self._login()
+           ^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt_state\auth\sso.py", line 287, in _login
+    thread.join(timeout=server.timeout)
+  File "C:\Users\Utilisateur\.pyenv\pyenv-win\versions\3.12.10\Lib\threading.py", line 1153, in join
+    self._wait_for_tstate_lock(timeout=max(timeout, 0))
+  File "C:\Users\Utilisateur\.pyenv\pyenv-win\versions\3.12.10\Lib\threading.py", line 1169, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Lib\site-packages\dbt_state\plugin.py", line 148, in on_user_cancel
+    original_handler(signum, frame)
+KeyboardInterrupt
+
+[0m17:01:51.268262 [debug] [MainThread]: Command `dbt run` failed at 17:01:51.268262 after 303.91 seconds
+[0m17:01:51.269684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A3F0D130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A6D5FE60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A0FBD6D0>]}
+[0m17:01:51.270711 [debug] [MainThread]: Flushing usage events
+[0m17:01:51.982529 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:13:43.298139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3685B8A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B36661CA70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3685EA480>]}
+
+
+============================== 10:13:43.309497 | 3c3d1f17-d491-4916-b805-cedf1fef0b62 ==============================
+[0m10:13:43.309497 [info ] [MainThread]: Running with dbt=1.11.12
+[0m10:13:43.309497 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start\\logs'}
+[0m10:13:43.345119 [info ] [MainThread]: dbt version: 1.11.12
+[0m10:13:43.345119 [info ] [MainThread]: python version: 3.12.10
+[0m10:13:43.345119 [info ] [MainThread]: python path: C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\env\Scripts\python.exe
+[0m10:13:43.345119 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m10:13:43.520266 [info ] [MainThread]: Using profiles dir at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start
+[0m10:13:43.520266 [info ] [MainThread]: Using profiles.yml file at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\profiles.yml
+[0m10:13:43.520266 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\dbt_project.yml
+[0m10:13:43.520266 [info ] [MainThread]: adapter type: postgres
+[0m10:13:43.520266 [info ] [MainThread]: adapter version: 1.10.2
+[0m10:13:43.624581 [info ] [MainThread]: Configuration:
+[0m10:13:43.624581 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m10:13:43.624581 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m10:13:43.624581 [info ] [MainThread]: Required dependencies:
+[0m10:13:43.624581 [debug] [MainThread]: Executing "git --help"
+[0m10:13:43.664137 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m10:13:43.666143 [debug] [MainThread]: STDERR: "b''"
+[0m10:13:43.666647 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m10:13:43.666647 [info ] [MainThread]: Connection:
+[0m10:13:43.666647 [info ] [MainThread]:   host: localhost
+[0m10:13:43.666647 [info ] [MainThread]:   port: 5432
+[0m10:13:43.666647 [info ] [MainThread]:   user: postgres
+[0m10:13:43.666647 [info ] [MainThread]:   database: megabase0
+[0m10:13:43.666647 [info ] [MainThread]:   schema: dbt
+[0m10:13:43.666647 [info ] [MainThread]:   connect_timeout: 10
+[0m10:13:43.666647 [info ] [MainThread]:   role: None
+[0m10:13:43.666647 [info ] [MainThread]:   search_path: None
+[0m10:13:43.666647 [info ] [MainThread]:   keepalives_idle: 0
+[0m10:13:43.666647 [info ] [MainThread]:   sslmode: None
+[0m10:13:43.666647 [info ] [MainThread]:   sslcert: None
+[0m10:13:43.666647 [info ] [MainThread]:   sslkey: None
+[0m10:13:43.666647 [info ] [MainThread]:   sslrootcert: None
+[0m10:13:43.666647 [info ] [MainThread]:   application_name: dbt
+[0m10:13:43.673469 [info ] [MainThread]:   retries: 1
+[0m10:13:43.674441 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m10:13:44.034415 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m10:13:46.489218 [debug] [MainThread]: Using postgres connection "debug"
+[0m10:13:46.489218 [debug] [MainThread]: On debug: select 1 as id
+[0m10:13:46.489218 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:13:46.590185 [debug] [MainThread]: SQL status: SELECT 1 in 0.104 seconds
+[0m10:13:46.590185 [debug] [MainThread]: On debug: Close
+[0m10:13:46.604789 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m10:13:46.605808 [info ] [MainThread]: [32mAll checks passed![0m
+[0m10:13:46.606260 [debug] [MainThread]: Command `dbt debug` succeeded at 10:13:46.606260 after 3.42 seconds
+[0m10:13:46.606260 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m10:13:46.606260 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B365336A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B36A425C70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3685EA480>]}
+[0m10:13:46.606260 [debug] [MainThread]: Flushing usage events
+[0m10:13:47.271700 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:13:58.676530 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E30CC3F590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E30C3E9BB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3099A47D0>]}
+
+
+============================== 10:13:58.682290 | a295f3b4-fbe3-444b-9dbd-cdefcee14321 ==============================
+[0m10:13:58.682290 [info ] [MainThread]: Running with dbt=1.11.12
+[0m10:13:58.682290 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start\\logs'}
+[0m10:13:59.143244 [info ] [MainThread]: State adapter: dbt-state v2.26.0 is enabled
+[0m10:13:59.749802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a295f3b4-fbe3-444b-9dbd-cdefcee14321', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E30FDA8D40>]}
+[0m10:13:59.828943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a295f3b4-fbe3-444b-9dbd-cdefcee14321', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E30FDA80E0>]}
+[0m10:13:59.830949 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m10:14:00.204218 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m10:14:01.342874 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:14:01.342874 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m10:14:01.342874 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:14:01.374196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a295f3b4-fbe3-444b-9dbd-cdefcee14321', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E310016210>]}
+[0m10:14:01.449092 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\target\manifest.json
+[0m10:14:01.461811 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\target\semantic_manifest.json
+[0m10:14:01.461811 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a295f3b4-fbe3-444b-9dbd-cdefcee14321', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E31006FB90>]}
+[0m10:14:01.461811 [info ] [MainThread]: Found 1 model, 4 sources, 475 macros
+[0m10:14:01.461811 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a295f3b4-fbe3-444b-9dbd-cdefcee14321', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E31006FF20>]}
+[0m10:14:01.461811 [info ] [MainThread]: 
+[0m10:14:01.461811 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:14:01.461811 [info ] [MainThread]: 
+[0m10:14:01.461811 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:16:56.898911 [warn ] [MainThread]: State adapter: You are using a personal sandbox org. To collaborate and manage a team, create a real organization: https://app.state.dbt.com/new-organization
+[0m10:16:57.319113 [debug] [MainThread]: State adapter: Target 'prod' not found in profile 'entrepot_dbt'. Deferral and dev cloning are disabled
+[0m10:16:57.334984 [debug] [ThreadPool]: Acquiring new postgres connection 'list_megabase0'
+[0m10:16:57.334984 [debug] [ThreadPool]: Using postgres connection "list_megabase0"
+[0m10:16:57.334984 [debug] [ThreadPool]: On list_megabase0: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "entrepot_dbt", "target_name": "dev", "connection_name": "list_megabase0"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m10:16:57.334984 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:16:57.427386 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.078 seconds
+[0m10:16:57.428392 [debug] [ThreadPool]: On list_megabase0: Close
+[0m10:16:57.429391 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_megabase0, now create_megabase0_dbt)
+[0m10:16:57.429391 [debug] [ThreadPool]: Creating schema "database: "megabase0"
+schema: "dbt"
+"
+[0m10:16:57.434391 [debug] [ThreadPool]: Using postgres connection "create_megabase0_dbt"
+[0m10:16:57.435391 [debug] [ThreadPool]: On create_megabase0_dbt: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "entrepot_dbt", "target_name": "dev", "connection_name": "create_megabase0_dbt"} */
+create schema if not exists "dbt"
+[0m10:16:57.435391 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:16:57.486797 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.053 seconds
+[0m10:16:57.486797 [debug] [ThreadPool]: On create_megabase0_dbt: COMMIT
+[0m10:16:57.486797 [debug] [ThreadPool]: Using postgres connection "create_megabase0_dbt"
+[0m10:16:57.486797 [debug] [ThreadPool]: On create_megabase0_dbt: COMMIT
+[0m10:16:57.486797 [debug] [ThreadPool]: SQL status: COMMIT in 0.001 seconds
+[0m10:16:57.486797 [debug] [ThreadPool]: On create_megabase0_dbt: Close
+[0m10:16:57.486797 [debug] [ThreadPool]: Acquiring new postgres connection 'list_megabase0_dbt'
+[0m10:16:57.486797 [debug] [ThreadPool]: Using postgres connection "list_megabase0_dbt"
+[0m10:16:57.486797 [debug] [ThreadPool]: On list_megabase0_dbt: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "entrepot_dbt", "target_name": "dev", "connection_name": "list_megabase0_dbt"} */
+select
+      'megabase0' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt'
+    union all
+    select
+      'megabase0' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt'
+    union all
+    select
+      'megabase0' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt'
+  
+[0m10:16:57.486797 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:16:57.691141 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.192 seconds
+[0m10:16:57.693860 [debug] [ThreadPool]: On list_megabase0_dbt: ROLLBACK
+[0m10:16:57.694871 [debug] [ThreadPool]: On list_megabase0_dbt: Close
+[0m10:16:57.701176 [debug] [MainThread]: Using postgres connection "master"
+[0m10:16:57.701176 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "entrepot_dbt", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m10:16:57.702172 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:16:57.900971 [debug] [MainThread]: SQL status: SELECT 0 in 0.199 seconds
+[0m10:16:57.902831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a295f3b4-fbe3-444b-9dbd-cdefcee14321', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3108D2600>]}
+[0m10:16:57.903461 [debug] [MainThread]: On master: ROLLBACK
+[0m10:16:57.903461 [debug] [MainThread]: On master: COMMIT
+[0m10:16:57.903461 [debug] [MainThread]: Using postgres connection "master"
+[0m10:16:57.904633 [debug] [MainThread]: On master: COMMIT
+[0m10:16:57.904633 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m10:16:57.905628 [debug] [MainThread]: On master: Close
+[0m10:16:57.932000 [debug] [Thread-7 (]: Began running node model.entrepot_dbt.exemple
+[0m10:16:57.932000 [info ] [Thread-7 (]: 1 of 1 START sql table model dbt.exemple ....................................... [RUN]
+[0m10:16:57.933000 [debug] [Thread-7 (]: Acquiring new postgres connection 'model.entrepot_dbt.exemple'
+[0m10:16:57.933000 [debug] [Thread-7 (]: Began compiling node model.entrepot_dbt.exemple
+[0m10:16:57.935956 [debug] [Thread-7 (]: State adapter: Prefetching last modified timestamps for 2.0 tables
+[0m10:16:57.946245 [debug] [Thread-7 (]: Writing injected SQL for node "model.entrepot_dbt.exemple"
+[0m10:16:57.949062 [debug] [Thread-7 (]: Began executing node model.entrepot_dbt.exemple
+[0m10:16:57.950098 [debug] [drc_0     ]: State adapter: Fetching definition for views: "megabase0"."public"."commune"
+[0m10:16:57.951102 [debug] [drc_0     ]: Acquiring new postgres connection 'fetch_views_0'
+[0m10:16:57.952115 [debug] [drc_0     ]: Using postgres connection "fetch_views_0"
+[0m10:16:57.952115 [debug] [drc_0     ]: On fetch_views_0: 
+        SELECT
+            schemaname,
+            viewname,
+            definition
+        FROM pg_views
+        WHERE schemaname = 'public' AND viewname = 'commune'
+        
+[0m10:16:57.953060 [debug] [drc_0     ]: Opening a new connection, currently in state init
+[0m10:16:57.998167 [debug] [drc_0     ]: SQL status: SELECT 0 in 0.045 seconds
+[0m10:16:57.999167 [debug] [drc_0     ]: On fetch_views_0: Close
+[0m10:16:58.000186 [debug] [drc_0     ]: State adapter: Fetching last_modified for tables: "megabase0"."public"."commune", "megabase0"."dbt"."exemple"
+[0m10:16:58.000186 [debug] [drc_0     ]: Re-using an available connection from the pool (formerly fetch_views_0, now fetch_last_modified_timestamps_0)
+[0m10:16:58.002167 [debug] [drc_0     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m10:16:58.003167 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "megabase0"."public"."commune" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m10:16:58.003167 [debug] [drc_0     ]: Opening a new connection, currently in state closed
+[0m10:16:58.059304 [debug] [drc_0     ]: Postgres adapter: Postgres error: ERREUR:  n'a pas pu récupérer les données d'horodatage de la validation
+HINT:  Assurez-vous que le paramètre de configuration « track_commit_timestamp » soit configuré.
+
+[0m10:16:58.060310 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: Close
+[0m10:16:58.060310 [warn ] [Thread-7 (]: State adapter: Runtime error preparing enriched SQL for model 'exemple': Database Error
+  ERREUR:  n'a pas pu récupérer les données d'horodatage de la validation
+  HINT:  Assurez-vous que le paramètre de configuration « track_commit_timestamp » soit configuré.. Continuing without state
+[0m10:16:58.102988 [debug] [Thread-7 (]: Writing runtime sql for node "model.entrepot_dbt.exemple"
+[0m10:16:58.105033 [debug] [Thread-7 (]: Using postgres connection "model.entrepot_dbt.exemple"
+[0m10:16:58.106029 [debug] [Thread-7 (]: On model.entrepot_dbt.exemple: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "entrepot_dbt", "target_name": "dev", "node_id": "model.entrepot_dbt.exemple"} */
+
+  
+    
+
+  create  table "megabase0"."dbt"."exemple__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- Modèle témoin : vérifie que dbt lit la base et écrit dans le schema dbt
+-- "dbt run" crée la table dbt.exemple à partir de ce SELECT
+-- 🔴 À supprimer une fois les vrais modèles écrits
+SELECT count(*) AS nb_communes
+FROM "megabase0"."public"."commune"
+  );
+  
+[0m10:16:58.106029 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m10:16:58.187639 [debug] [Thread-7 (]: SQL status: SELECT 1 in 0.081 seconds
+[0m10:16:58.195904 [debug] [Thread-7 (]: Using postgres connection "model.entrepot_dbt.exemple"
+[0m10:16:58.196973 [debug] [Thread-7 (]: On model.entrepot_dbt.exemple: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "entrepot_dbt", "target_name": "dev", "node_id": "model.entrepot_dbt.exemple"} */
+alter table "megabase0"."dbt"."exemple__dbt_tmp" rename to "exemple"
+[0m10:16:58.198240 [debug] [Thread-7 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m10:16:58.213927 [debug] [Thread-7 (]: On model.entrepot_dbt.exemple: COMMIT
+[0m10:16:58.213927 [debug] [Thread-7 (]: Using postgres connection "model.entrepot_dbt.exemple"
+[0m10:16:58.214927 [debug] [Thread-7 (]: On model.entrepot_dbt.exemple: COMMIT
+[0m10:16:58.216246 [debug] [Thread-7 (]: SQL status: COMMIT in 0.001 seconds
+[0m10:16:58.221890 [debug] [Thread-7 (]: Applying DROP to: "megabase0"."dbt"."exemple__dbt_backup"
+[0m10:16:58.225882 [debug] [Thread-7 (]: Using postgres connection "model.entrepot_dbt.exemple"
+[0m10:16:58.226882 [debug] [Thread-7 (]: On model.entrepot_dbt.exemple: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "entrepot_dbt", "target_name": "dev", "node_id": "model.entrepot_dbt.exemple"} */
+drop table if exists "megabase0"."dbt"."exemple__dbt_backup" cascade
+[0m10:16:58.228897 [debug] [Thread-7 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m10:16:58.231537 [debug] [Thread-7 (]: On model.entrepot_dbt.exemple: Close
+[0m10:16:58.233544 [debug] [Thread-7 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a295f3b4-fbe3-444b-9dbd-cdefcee14321', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E30C950500>]}
+[0m10:16:58.234544 [info ] [Thread-7 (]: 1 of 1 OK created sql table model dbt.exemple .................................. [[32mSELECT 1[0m in 0.30s]
+[0m10:16:58.234544 [debug] [Thread-7 (]: Finished running node model.entrepot_dbt.exemple
+[0m10:16:58.236178 [debug] [MainThread]: On master: COMMIT
+[0m10:16:58.237492 [debug] [MainThread]: Using postgres connection "master"
+[0m10:16:58.237492 [debug] [MainThread]: On master: COMMIT
+[0m10:16:58.238447 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:16:58.276288 [debug] [MainThread]: SQL status: COMMIT in 0.038 seconds
+[0m10:16:58.276288 [debug] [MainThread]: On master: Close
+[0m10:16:58.277334 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:16:58.277334 [debug] [MainThread]: Connection 'create_megabase0_dbt' was properly closed.
+[0m10:16:58.278289 [debug] [MainThread]: Connection 'list_megabase0_dbt' was properly closed.
+[0m10:16:58.278289 [debug] [MainThread]: Connection 'model.entrepot_dbt.exemple' was properly closed.
+[0m10:16:58.278289 [debug] [MainThread]: Connection 'fetch_last_modified_timestamps_0' was properly closed.
+[0m10:16:58.279288 [info ] [MainThread]: 
+[0m10:16:58.279288 [info ] [MainThread]: Finished running 1 table model in 0 hours 2 minutes and 56.82 seconds (176.82s).
+[0m10:16:58.280288 [debug] [MainThread]: Command end result
+[0m10:16:58.305622 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\target\manifest.json
+[0m10:16:58.308617 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\target\semantic_manifest.json
+[0m10:16:58.313706 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\target\run_results.json
+[0m10:16:58.314705 [info ] [MainThread]: 
+[0m10:16:58.314705 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:16:58.315969 [info ] [MainThread]: 
+[0m10:16:58.315969 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m10:16:58.317012 [debug] [MainThread]: Command `dbt run` succeeded at 10:16:58.317012 after 179.76 seconds
+[0m10:16:58.317012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E30D478770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3099A47D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E30C90F8C0>]}
+[0m10:16:58.318013 [debug] [MainThread]: Flushing usage events
+[0m10:16:58.972039 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:17:44.018063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025B6A11E930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025B6CAA90D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025B6CAAA6F0>]}
+
+
+============================== 10:17:44.024017 | e13299fa-56cd-450f-b37c-53c84bd0dcc9 ==============================
+[0m10:17:44.024017 [info ] [MainThread]: Running with dbt=1.11.12
+[0m10:17:44.024017 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Utilisateur\\Desktop\\Test du code\\simplon-de-2026-lyon-main\\simplon-de-2026-lyon-main\\megabase\\corrige0\\dbt_start\\logs'}
+[0m10:17:44.334457 [info ] [MainThread]: State adapter: dbt-state v2.26.0 is enabled
+[0m10:17:44.716202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e13299fa-56cd-450f-b37c-53c84bd0dcc9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025B6EF9BDD0>]}
+[0m10:17:44.779951 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e13299fa-56cd-450f-b37c-53c84bd0dcc9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025B6F6903E0>]}
+[0m10:17:44.779951 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m10:17:45.067092 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m10:17:45.184807 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:17:45.184807 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m10:17:45.184807 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:17:45.216762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e13299fa-56cd-450f-b37c-53c84bd0dcc9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025B6F57CCE0>]}
+[0m10:17:45.280079 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\target\manifest.json
+[0m10:17:45.280079 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\target\semantic_manifest.json
+[0m10:17:45.280079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e13299fa-56cd-450f-b37c-53c84bd0dcc9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025B6FE5FA40>]}
+[0m10:17:45.280079 [info ] [MainThread]: Found 1 model, 4 sources, 475 macros
+[0m10:17:45.280079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e13299fa-56cd-450f-b37c-53c84bd0dcc9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025B6FE5F8C0>]}
+[0m10:17:45.295776 [info ] [MainThread]: 
+[0m10:17:45.295776 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:17:45.295776 [info ] [MainThread]: 
+[0m10:17:45.295776 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:17:45.911402 [warn ] [MainThread]: State adapter: You are using a personal sandbox org. To collaborate and manage a team, create a real organization: https://app.state.dbt.com/new-organization
+[0m10:17:46.318605 [debug] [MainThread]: State adapter: Target 'prod' not found in profile 'entrepot_dbt'. Deferral and dev cloning are disabled
+[0m10:17:46.332168 [debug] [ThreadPool]: Acquiring new postgres connection 'list_megabase0'
+[0m10:17:46.332168 [debug] [ThreadPool]: Using postgres connection "list_megabase0"
+[0m10:17:46.332168 [debug] [ThreadPool]: On list_megabase0: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "entrepot_dbt", "target_name": "dev", "connection_name": "list_megabase0"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m10:17:46.348335 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:17:46.379983 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.042 seconds
+[0m10:17:46.379983 [debug] [ThreadPool]: On list_megabase0: Close
+[0m10:17:46.379983 [debug] [ThreadPool]: Acquiring new postgres connection 'list_megabase0_dbt'
+[0m10:17:46.395866 [debug] [ThreadPool]: Using postgres connection "list_megabase0_dbt"
+[0m10:17:46.395866 [debug] [ThreadPool]: On list_megabase0_dbt: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "entrepot_dbt", "target_name": "dev", "connection_name": "list_megabase0_dbt"} */
+select
+      'megabase0' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt'
+    union all
+    select
+      'megabase0' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt'
+    union all
+    select
+      'megabase0' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt'
+  
+[0m10:17:46.395866 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:17:46.435848 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.044 seconds
+[0m10:17:46.435848 [debug] [ThreadPool]: On list_megabase0_dbt: ROLLBACK
+[0m10:17:46.435848 [debug] [ThreadPool]: On list_megabase0_dbt: Close
+[0m10:17:46.435848 [debug] [MainThread]: Using postgres connection "master"
+[0m10:17:46.435848 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "entrepot_dbt", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m10:17:46.435848 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:17:46.485788 [debug] [MainThread]: SQL status: SELECT 0 in 0.044 seconds
+[0m10:17:46.485788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e13299fa-56cd-450f-b37c-53c84bd0dcc9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025B700A5B80>]}
+[0m10:17:46.485788 [debug] [MainThread]: On master: ROLLBACK
+[0m10:17:46.485788 [debug] [MainThread]: On master: COMMIT
+[0m10:17:46.485788 [debug] [MainThread]: Using postgres connection "master"
+[0m10:17:46.485788 [debug] [MainThread]: On master: COMMIT
+[0m10:17:46.485788 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m10:17:46.485788 [debug] [MainThread]: On master: Close
+[0m10:17:46.485788 [debug] [Thread-5 (]: Began running node model.entrepot_dbt.exemple
+[0m10:17:46.500771 [info ] [Thread-5 (]: 1 of 1 START sql table model dbt.exemple ....................................... [RUN]
+[0m10:17:46.500771 [debug] [Thread-5 (]: Acquiring new postgres connection 'model.entrepot_dbt.exemple'
+[0m10:17:46.501905 [debug] [Thread-5 (]: Began compiling node model.entrepot_dbt.exemple
+[0m10:17:46.501905 [debug] [Thread-5 (]: State adapter: Prefetching last modified timestamps for 2.0 tables
+[0m10:17:46.501905 [debug] [Thread-5 (]: Writing injected SQL for node "model.entrepot_dbt.exemple"
+[0m10:17:46.501905 [debug] [Thread-5 (]: Began executing node model.entrepot_dbt.exemple
+[0m10:17:46.501905 [debug] [drc_0     ]: State adapter: Fetching definition for views: "megabase0"."public"."commune"
+[0m10:17:46.501905 [debug] [drc_0     ]: Acquiring new postgres connection 'fetch_views_0'
+[0m10:17:46.501905 [debug] [drc_0     ]: Using postgres connection "fetch_views_0"
+[0m10:17:46.501905 [debug] [drc_0     ]: On fetch_views_0: 
+        SELECT
+            schemaname,
+            viewname,
+            definition
+        FROM pg_views
+        WHERE schemaname = 'public' AND viewname = 'commune'
+        
+[0m10:17:46.501905 [debug] [drc_0     ]: Opening a new connection, currently in state init
+[0m10:17:46.554226 [debug] [drc_0     ]: SQL status: SELECT 0 in 0.044 seconds
+[0m10:17:46.554226 [debug] [drc_0     ]: On fetch_views_0: Close
+[0m10:17:46.554226 [debug] [drc_0     ]: State adapter: Fetching last_modified for tables: "megabase0"."public"."commune", "megabase0"."dbt"."exemple"
+[0m10:17:46.554226 [debug] [drc_0     ]: Re-using an available connection from the pool (formerly fetch_views_0, now fetch_last_modified_timestamps_0)
+[0m10:17:46.554226 [debug] [drc_0     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m10:17:46.554226 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "megabase0"."public"."commune" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m10:17:46.554226 [debug] [drc_0     ]: Opening a new connection, currently in state closed
+[0m10:17:46.601691 [debug] [drc_0     ]: Postgres adapter: Postgres error: ERREUR:  n'a pas pu récupérer les données d'horodatage de la validation
+HINT:  Assurez-vous que le paramètre de configuration « track_commit_timestamp » soit configuré.
+
+[0m10:17:46.601691 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: Close
+[0m10:17:46.602737 [warn ] [Thread-5 (]: State adapter: Runtime error preparing enriched SQL for model 'exemple': Database Error
+  ERREUR:  n'a pas pu récupérer les données d'horodatage de la validation
+  HINT:  Assurez-vous que le paramètre de configuration « track_commit_timestamp » soit configuré.. Continuing without state
+[0m10:17:46.635646 [debug] [Thread-5 (]: Writing runtime sql for node "model.entrepot_dbt.exemple"
+[0m10:17:46.635646 [debug] [Thread-5 (]: Using postgres connection "model.entrepot_dbt.exemple"
+[0m10:17:46.635646 [debug] [Thread-5 (]: On model.entrepot_dbt.exemple: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "entrepot_dbt", "target_name": "dev", "node_id": "model.entrepot_dbt.exemple"} */
+
+  
+    
+
+  create  table "megabase0"."dbt"."exemple__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- Modèle témoin : vérifie que dbt lit la base et écrit dans le schema dbt
+-- "dbt run" crée la table dbt.exemple à partir de ce SELECT
+-- 🔴 À supprimer une fois les vrais modèles écrits
+SELECT count(*) AS nb_communes
+FROM "megabase0"."public"."commune"
+  );
+  
+[0m10:17:46.635646 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m10:17:46.686266 [debug] [Thread-5 (]: SQL status: SELECT 1 in 0.044 seconds
+[0m10:17:46.691999 [debug] [Thread-5 (]: Using postgres connection "model.entrepot_dbt.exemple"
+[0m10:17:46.691999 [debug] [Thread-5 (]: On model.entrepot_dbt.exemple: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "entrepot_dbt", "target_name": "dev", "node_id": "model.entrepot_dbt.exemple"} */
+alter table "megabase0"."dbt"."exemple" rename to "exemple__dbt_backup"
+[0m10:17:46.691999 [debug] [Thread-5 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m10:17:46.700587 [debug] [Thread-5 (]: Using postgres connection "model.entrepot_dbt.exemple"
+[0m10:17:46.700587 [debug] [Thread-5 (]: On model.entrepot_dbt.exemple: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "entrepot_dbt", "target_name": "dev", "node_id": "model.entrepot_dbt.exemple"} */
+alter table "megabase0"."dbt"."exemple__dbt_tmp" rename to "exemple"
+[0m10:17:46.701289 [debug] [Thread-5 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m10:17:46.717995 [debug] [Thread-5 (]: On model.entrepot_dbt.exemple: COMMIT
+[0m10:17:46.717995 [debug] [Thread-5 (]: Using postgres connection "model.entrepot_dbt.exemple"
+[0m10:17:46.717995 [debug] [Thread-5 (]: On model.entrepot_dbt.exemple: COMMIT
+[0m10:17:46.719038 [debug] [Thread-5 (]: SQL status: COMMIT in 0.001 seconds
+[0m10:17:46.719038 [debug] [Thread-5 (]: Applying DROP to: "megabase0"."dbt"."exemple__dbt_backup"
+[0m10:17:46.719038 [debug] [Thread-5 (]: Using postgres connection "model.entrepot_dbt.exemple"
+[0m10:17:46.719038 [debug] [Thread-5 (]: On model.entrepot_dbt.exemple: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "entrepot_dbt", "target_name": "dev", "node_id": "model.entrepot_dbt.exemple"} */
+drop table if exists "megabase0"."dbt"."exemple__dbt_backup" cascade
+[0m10:17:46.734746 [debug] [Thread-5 (]: SQL status: DROP TABLE in 0.009 seconds
+[0m10:17:46.734746 [debug] [Thread-5 (]: On model.entrepot_dbt.exemple: Close
+[0m10:17:46.734746 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e13299fa-56cd-450f-b37c-53c84bd0dcc9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025B706E5790>]}
+[0m10:17:46.734746 [info ] [Thread-5 (]: 1 of 1 OK created sql table model dbt.exemple .................................. [[32mSELECT 1[0m in 0.23s]
+[0m10:17:46.734746 [debug] [Thread-5 (]: Finished running node model.entrepot_dbt.exemple
+[0m10:17:46.734746 [debug] [MainThread]: On master: COMMIT
+[0m10:17:46.734746 [debug] [MainThread]: Using postgres connection "master"
+[0m10:17:46.734746 [debug] [MainThread]: On master: COMMIT
+[0m10:17:46.734746 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:17:46.784534 [debug] [MainThread]: SQL status: COMMIT in 0.036 seconds
+[0m10:17:46.784534 [debug] [MainThread]: On master: Close
+[0m10:17:46.784534 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:17:46.784534 [debug] [MainThread]: Connection 'list_megabase0' was properly closed.
+[0m10:17:46.784534 [debug] [MainThread]: Connection 'list_megabase0_dbt' was properly closed.
+[0m10:17:46.784534 [debug] [MainThread]: Connection 'model.entrepot_dbt.exemple' was properly closed.
+[0m10:17:46.784534 [debug] [MainThread]: Connection 'fetch_last_modified_timestamps_0' was properly closed.
+[0m10:17:46.784534 [info ] [MainThread]: 
+[0m10:17:46.784534 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 1.49 seconds (1.49s).
+[0m10:17:46.784534 [debug] [MainThread]: Command end result
+[0m10:17:46.807199 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\target\manifest.json
+[0m10:17:46.807199 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\target\semantic_manifest.json
+[0m10:17:46.818911 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Utilisateur\Desktop\Test du code\simplon-de-2026-lyon-main\simplon-de-2026-lyon-main\megabase\corrige0\dbt_start\target\run_results.json
+[0m10:17:46.818911 [info ] [MainThread]: 
+[0m10:17:46.818911 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:17:46.818911 [info ] [MainThread]: 
+[0m10:17:46.818911 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m10:17:46.818911 [debug] [MainThread]: Command `dbt run` succeeded at 10:17:46.818911 after 2.91 seconds
+[0m10:17:46.818911 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025B6D4FE7E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025B6F185250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025B6CDFBB00>]}
+[0m10:17:46.818911 [debug] [MainThread]: Flushing usage events
+[0m10:17:47.434812 [debug] [MainThread]: An error was encountered while trying to flush usage events

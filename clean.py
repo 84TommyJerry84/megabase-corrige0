@@ -1,5 +1,6 @@
 """Clean: une ligne de l'API -> dict prêt à insérer (les clés = colonnes SQL)."""
 import json
+import pandas as pd
 # Les arrondissements de Lyon, Paris et Marseille ne sont pas dans la liste des
 # communes (geo.api renvoie une seule commune : 69123, 75056, 13055).
 # On ramène chaque arrondissement vers sa commune principale.
@@ -142,4 +143,48 @@ def clean_btp(etab, nom):
         "latitude": _to_float(etab.get("latitude")),
         "longitude": _to_float(etab.get("longitude")),
         "insee_code": normalize_insee(etab.get("commune")),
+    }
+def _to_float(v):
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return None
+
+
+def _to_date(v):
+    try:
+        return pd.to_datetime(v).date()
+    except Exception:
+        return None
+
+
+def _to_str(v):
+    if v is None:
+        return None
+    return str(v).strip()
+
+
+def clean_eau_resultats_dis(row):
+    return {
+        # Identifiants géographiques
+
+        "insee_code": _to_str(row.get("code_commune")),
+        "nom_commune": _to_str(row.get("nom_commune")),
+
+        # Paramètre qualité eau
+
+
+        "libelle_parametre": _to_str(row.get("libelle_parametre")),
+
+        # Résultat d’analyse
+        
+        "code_prelevement": row.get("code_prelevement"),
+        "resultat_alphanumerique": row.get("resultat_alphanumerique"),
+        "resultat_numerique": row.get("resultat_numerique"),
+        "libelle_unite": row.get("libelle_unite"),
+        "conclusion_conformite": row.get("conclusion_conformite"),
+
+        # Date prélèvement
+
+        "date_prelevement": row.get("date_prelevement"),
     }

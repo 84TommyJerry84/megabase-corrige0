@@ -1,16 +1,62 @@
 -- 1. État des lieux (volumétrie)
 
 --1.1 le nombre de lignes de chaque table (count(*)) 
-SELECT
-    (SELECT COUNT(*) FROM commune) AS communes,
-    (SELECT COUNT(*) FROM mairie) AS mairies,
-    (SELECT COUNT(*) FROM lycee) AS lycees,
-    (SELECT COUNT(*) FROM college) AS colleges,
-    (SELECT COUNT(*) FROM pharmacie) AS pharmacies,
-    (SELECT COUNT(*) FROM ehpad) AS ehpads,
-    (SELECT COUNT(*) FROM bibliotheque) AS bibliotheques,
-    (SELECT COUNT(*) FROM gare) AS gares,
-    (SELECT COUNT(*) FROM entreprise_btp) AS entreprises_btp;
+SELECT 
+  (
+    SELECT 
+      COUNT(*) 
+    FROM 
+      commune
+  ) AS communes, 
+  (
+    SELECT 
+      COUNT(*) 
+    FROM 
+      mairie
+  ) AS mairies, 
+  (
+    SELECT 
+      COUNT(*) 
+    FROM 
+      lycee
+  ) AS lycees, 
+  (
+    SELECT 
+      COUNT(*) 
+    FROM 
+      college
+  ) AS colleges, 
+  (
+    SELECT 
+      COUNT(*) 
+    FROM 
+      pharmacie
+  ) AS pharmacies, 
+  (
+    SELECT 
+      COUNT(*) 
+    FROM 
+      ehpad
+  ) AS ehpads, 
+  (
+    SELECT 
+      COUNT(*) 
+    FROM 
+      bibliotheque
+  ) AS bibliotheques, 
+  (
+    SELECT 
+      COUNT(*) 
+    FROM 
+      gare
+  ) AS gares, 
+  (
+    SELECT 
+      COUNT(*) 
+    FROM 
+      entreprise_btp
+  ) AS entreprises_btp;
+
   
 --1.2 lle nombre de communes par région et par département (jointures commune -> departement -> region, GROUP BY) ;
 SELECT
@@ -260,11 +306,11 @@ SELECT
     d.code_departement,
     d.name AS departement,
 
-    (
+    (   -- faire plutot un join pour optimiser cette requete et eviter la redonnance
         SELECT SUM(c.population)
         FROM commune c
         WHERE c.code_departement = d.code_departement
-    ) AS population_totale,
+    )   AS population_totale,
 
     (
         SELECT COUNT(DISTINCT p.finess)
@@ -361,3 +407,15 @@ GROUP BY
     code_departement,
     departement
 ORDER BY pharmacies_pour_10000_habitants DESC;
+-- requete Selim
+
+SELECT d.name AS departement, pop.habitants, ph.pharmacies,
+       round(pop.habitants::numeric / ph.pharmacies, 0) AS habitants_par_pharmacie
+FROM departement d
+JOIN (SELECT code_departement, sum(population) AS habitants
+      FROM commune GROUP BY code_departement) pop ON pop.code_departement = d.code_departement
+JOIN (SELECT c.code_departement, count(*) AS pharmacies
+      FROM pharmacie p JOIN commune c ON c.insee_code = p.insee_code
+      GROUP BY c.code_departement) ph ON ph.code_departement = d.code_departement
+ORDER BY habitants_par_pharmacie DESC
+LIMIT 15;

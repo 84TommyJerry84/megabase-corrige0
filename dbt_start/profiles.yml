@@ -1,0 +1,27 @@
+# Connexion locale à megabase0 
+entrepot_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: postgres
+      password: "toto"
+      dbname: megabase0
+      schema: dbt
+      threads: 4
+    # Sortie vers la base Scalingo (brief 08, etape 8) : dé-commenter et
+    # remplacer par les morceaux de DATABASE_URL
+    # (postgres://user:motdepasse@hote:port/base). Le mot de passe reste dans
+    # une variable d'environnement, jamais ici. Usage : dbt run --target prod
+    # prod:
+    #   type: postgres
+    #   host: <hote>
+    #   port: <port>
+    #   user: <user>
+    #   password: "{{ env_var('SCALINGO_PG_PASSWORD') }}"
+    #   dbname: <base>
+    #   schema: dbt
+    #   sslmode: require
+    #   threads: 4

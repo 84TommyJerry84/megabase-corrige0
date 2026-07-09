@@ -12,7 +12,6 @@ ORDER BY
     nb_pharmacies DESC;
 
 --requet 2 : la population par région et par département
-
 SELECT
     dc.region,
     dc.departement,
@@ -21,6 +20,32 @@ FROM entrepot.dim_commune AS dc
 GROUP BY
     dc.region,
     dc.departement
+ORDER BY
+    dc.region,
+    dc.departement;
+
+SELECT
+    dc.region,
+    dc.departement,
+    SUM(dc.population) AS population_departement,
+    SUM(SUM(dc.population)) OVER (PARTITION BY dc.region) AS population_totale_region
+FROM entrepot.dim_commune AS dc
+GROUP BY
+    dc.region,
+    dc.departement
+ORDER BY
+    dc.region,
+    dc.departement;
+
+-- requete 2 : la population par region et par département bis
+SELECT
+    dc.region,
+    dc.departement,
+    SUM(dc.population) AS population_totale
+FROM entrepot.dim_commune AS dc
+GROUP BY GROUPING SETS
+    ((dc.region),
+    (dc.departement))
 ORDER BY
     dc.region,
     dc.departement;

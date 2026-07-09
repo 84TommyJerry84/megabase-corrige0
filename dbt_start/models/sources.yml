@@ -1,0 +1,13 @@
+version: 2
+
+# Les tables de la base de collecte (brief 03), schema public.
+# Une table declarée ici s'écrit {{ source('megabase0', 'commune') }} dans un
+# modèle. 🔴 À compléter : ajoutez vos typologies sous "tables".
+sources:
+  - name: megabase0
+    schema: public
+    tables:
+      - name: commune
+      - name: departement
+      - name: region
+      - name: lycee
